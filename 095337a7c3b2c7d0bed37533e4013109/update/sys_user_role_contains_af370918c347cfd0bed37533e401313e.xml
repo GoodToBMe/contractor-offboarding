@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="INSERT_OR_UPDATE">
+        <contains display_value="x_1884414_contra_0.contractor_user" name="x_1884414_contra_0.contractor_user">195337a7c3b2c7d0bed37533e4013180</contains>
+        <role display_value="x_1884414_contra_0.contractor_admin" name="x_1884414_contra_0.contractor_admin">915337a7c3b2c7d0bed37533e4013168</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-27 16:10:24</sys_created_on>
+        <sys_id>af370918c347cfd0bed37533e401313e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1884414_contra_0.contractor_user.x_1884414_contra_0.contractor_admin</sys_name>
+        <sys_package display_value="Contractor offboarding" source="x_1884414_contra_0">095337a7c3b2c7d0bed37533e4013109</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
+        <sys_update_name>sys_user_role_contains_af370918c347cfd0bed37533e401313e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-27 16:10:24</sys_updated_on>
+    </sys_user_role_contains>
+</record_update>
