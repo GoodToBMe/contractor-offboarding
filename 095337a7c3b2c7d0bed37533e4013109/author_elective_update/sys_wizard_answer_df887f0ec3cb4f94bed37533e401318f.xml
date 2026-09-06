@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer">
+    <sys_wizard_answer action="DELETE">
+        <active>true</active>
+        <answer>Offboarding Task</answer>
+        <button_label/>
+        <dependent_value/>
+        <element/>
+        <name>Offboarding Task</name>
+        <next_question/>
+        <order>100</order>
+        <payload_name/>
+        <question display_value="Task" name="Task">9962f07bbd3222104f34afdd794b6aca</question>
+        <roles/>
+        <script/>
+        <sys_class_name>sys_wizard_answer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-02 15:34:26</sys_created_on>
+        <sys_id>df887f0ec3cb4f94bed37533e401318f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Offboarding Task</sys_name>
+        <sys_package display_value="Contractor offboarding" source="x_1884414_contra_0">095337a7c3b2c7d0bed37533e4013109</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
+        <sys_update_name>sys_wizard_answer_df887f0ec3cb4f94bed37533e401318f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-02 15:34:26</sys_updated_on>
+        <table/>
+        <target_url>x_1884414_contra_0_offboarding_task.do</target_url>
+        <type>1</type>
+    </sys_wizard_answer>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</application>
+        <file_path/>
+        <instance_id>fdb091feeb9826105a2dfceacad0cda3</instance_id>
+        <instance_name>dev302092</instance_name>
+        <name>sys_wizard_answer_df887f0ec3cb4f94bed37533e401318f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer"><sys_wizard_answer action="INSERT_OR_UPDATE"><active>true</active><answer>Offboarding Task</answer><button_label/><dependent_value/><element/><name>Offboarding Task</name><next_question/><order>100</order><payload_name/><question display_value="Task" name="Task">9962f07bbd3222104f34afdd794b6aca</question><roles/><script/><sys_class_name>sys_wizard_answer</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 15:34:26</sys_created_on><sys_id>df887f0ec3cb4f94bed37533e401318f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Offboarding Task</sys_name><sys_package display_value="Contractor offboarding" source="x_1884414_contra_0">095337a7c3b2c7d0bed37533e4013109</sys_package><sys_policy/><sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope><sys_update_name>sys_wizard_answer_df887f0ec3cb4f94bed37533e401318f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 15:34:26</sys_updated_on><table/><target_url>x_1884414_contra_0_offboarding_task.do</target_url><type>1</type></sys_wizard_answer></record_update>]]></payload>
+        <payload_hash>-2012948610</payload_hash>
+        <record_name>Offboarding Task</record_name>
+        <reverted_from/>
+        <source>7c765c12c3220310bed37533e40131d6</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2026-08-08 21:13:41</sys_created_on>
+        <sys_id>e737541ec3838f94bed37533e401317c</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>19fe33973880000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Answer</type>
+        <update_guid>a737541e71838f940d78dc3e20986f7c</update_guid>
+        <update_guid_history>a737541e71838f940d78dc3e20986f7c:-2012948610</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-02 17:48:32</sys_created_on>
+        <sys_db_object display_value="" name="sys_wizard_answer">sys_wizard_answer</sys_db_object>
+        <sys_id>16daf277bb14470097dae28bb7190000</sys_id>
+        <sys_metadata>df887f0ec3cb4f94bed37533e401318f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Offboarding Task</sys_name>
+        <sys_package display_value="Contractor offboarding" source="x_1884414_contra_0">095337a7c3b2c7d0bed37533e4013109</sys_package>
+        <sys_parent display_value="Task">9962f07bbd3222104f34afdd794b6aca</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
+        <sys_scope_delete display_value="">11951106d61846208c5eb49fd88b6400</sys_scope_delete>
+        <sys_update_name>sys_wizard_answer_df887f0ec3cb4f94bed37533e401318f</sys_update_name>
+        <sys_update_version display_value="sys_wizard_answer_df887f0ec3cb4f94bed37533e401318f">e737541ec3838f94bed37533e401317c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-02 17:48:32</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

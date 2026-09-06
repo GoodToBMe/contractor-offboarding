@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="05f794dec3838f94bed37533e40131cf" extends="task" label="Contractor Offboarding Task" max_length="40" name="x_1884414_contra_0_contractor_offboarding_task" type="collection">
+        <element label="Contractor" max_length="32" name="contractor" reference="x_1884414_contra_0_contractor" type="reference"/>
+        <element label="Account disabled" max_length="255" name="account_disabled" type="boolean"/>
+        <element label="Asset returned" max_length="255" name="asset_returned" type="boolean"/>
+    </element>
+</database>

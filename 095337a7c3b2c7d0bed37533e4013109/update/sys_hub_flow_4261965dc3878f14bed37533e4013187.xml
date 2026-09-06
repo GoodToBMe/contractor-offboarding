@@ -1,0 +1,1057 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=firefox,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=522586000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Flow to delegate and execute offboarding contractors</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>contractor_offboarding</internal_name>
+        <label_cache>[{"name":"373c09e4-aaa4-4a08-afc8-c9b43d3c710a.record","label":"2 - Update Record➛Contractor Record","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"73d9fcf1-e5de-4419-ac3f-e6fed47830be":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"34881961-43c1-4659-9e24-03cacd2cee86.record","label":"4 - Update Record➛Contractor Offboarding Task Record","reference":"x_1884414_contra_0_contractor_offboarding_task","reference_display":"Contractor Offboarding Task","type":"reference","base_type":"reference","usedInstances":{"e080dd22-40a4-41b5-8cb8-00cb9c0e896e":["record"],"27324f1a-c33e-442c-aa06-3be98eb18810":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d3c768f9-ce5b-4c92-a89c-c50f8330f1ac.record","label":"1 - Create Record➛Contractor Offboarding Task Record","reference":"x_1884414_contra_0_contractor_offboarding_task","reference_display":"Contractor Offboarding Task","type":"reference","base_type":"reference","usedInstances":{"34881961-43c1-4659-9e24-03cacd2cee86":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.table_name","label":"Trigger - Record Updated➛Contractor Table","reference":"x_1884414_contra_0_contractor","reference_display":"Contractor","type":"table_name","base_type":"table_name","usedInstances":{},"attributes":{"test_input_hidden":"true"}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Contractor Record","reference":"x_1884414_contra_0_contractor","reference_display":"Contractor","type":"reference","base_type":"reference","usedInstances":{"54172213-39c1-4bfe-91b4-d045a14e9bee":["record"],"d3c768f9-ce5b-4c92-a89c-c50f8330f1ac":["contractor"]},"attributes":{}},{"name":"Updated_1.current.contractor","label":"Trigger - Record Updated➛Contractor Record➛Contractor","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1884414_contra_0_contractor","column_name":"contractor","usedInstances":{"d3c768f9-ce5b-4c92-a89c-c50f8330f1ac":["contractor"],"373c09e4-aaa4-4a08-afc8-c9b43d3c710a":["record"]}}]</label_cache>
+        <master_snapshot>beea11dbc3cb8b10bed37533e401312b</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Contractor Offboarding</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>03ea11dbc3cb8b10bed37533e40131cd</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-31 00:08:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4261965dc3878f14bed37533e4013187</sys_id>
+        <sys_mod_count>47</sys_mod_count>
+        <sys_name>Contractor Offboarding</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Contractor offboarding" source="x_1884414_contra_0">095337a7c3b2c7d0bed37533e4013109</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
+        <sys_update_name>sys_hub_flow_4261965dc3878f14bed37533e4013187</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-06 01:36:29</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>df1f199bc30f8b10bed37533e4013184</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=4261965dc3878f14bed37533e4013187"/>
+    <sys_variable_value action="delete_multiple" query="document_key=4261965dc3878f14bed37533e4013187"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_1884414_contra_0_contractor">offboarding_status=active<item display_value="Active" endquery="false" field="offboarding_status" goto="false" newquery="false" operator="=" or="false" value="active"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>false</on_insert>
+        <on_update>true</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-06 01:18:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>03ea11dbc3cb8b10bed37533e40131cd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-06 01:18:09</sys_updated_on>
+        <table>x_1884414_contra_0_contractor</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <data>{"run_on_extended":"false","run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any"}</data>
+        <identifier>4261965dc3878f14bed37533e4013187</identifier>
+        <identifier_type>flow</identifier_type>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-06 01:18:09</sys_created_on>
+        <sys_id>cbea11dbc3cb8b10bed37533e40131ce</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-06 17:45:09</sys_updated_on>
+        <trigger display_value="">03ea11dbc3cb8b10bed37533e40131cd</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=4261965dc3878f14bed37533e4013187^sys_idNOT INcbea11dbc3cb8b10bed37533e40131ce"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=4261965dc3878f14bed37533e4013187"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=4261965dc3878f14bed37533e4013187^sys_idNOT IN4e61965dc3878f14bed37533e401318b"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>4261965dc3878f14bed37533e4013187</id>
+        <name>Contractor Offboarding</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-31 00:08:22</sys_created_on>
+        <sys_id>4e61965dc3878f14bed37533e401318b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-31 00:08:22</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=4e61965dc3878f14bed37533e401318b"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=4261965dc3878f14bed37533e4013187^sys_idNOT INce281913c3cb8b10bed37533e401315d,d881d29dc3878f14bed37533e40131e3,f081169dc3878f14bed37533e4013183"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Contractor Offboarding">4261965dc3878f14bed37533e4013187</model>
+        <model_id>4261965dc3878f14bed37533e4013187</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_4261965dc3878f14bed37533e4013187</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-06 01:06:04</sys_created_on>
+        <sys_id>ce281913c3cb8b10bed37533e401315d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-06 01:06:04</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=ce281913c3cb8b10bed37533e401315d"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Contractor Offboarding">4261965dc3878f14bed37533e4013187</model>
+        <model_id>4261965dc3878f14bed37533e4013187</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_4261965dc3878f14bed37533e4013187</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-31 00:08:47</sys_created_on>
+        <sys_id>d881d29dc3878f14bed37533e40131e3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-06 01:06:04</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=d881d29dc3878f14bed37533e40131e3"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Contractor Offboarding">4261965dc3878f14bed37533e4013187</model>
+        <model_id>4261965dc3878f14bed37533e4013187</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_4261965dc3878f14bed37533e4013187</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-31 00:08:49</sys_created_on>
+        <sys_id>f081169dc3878f14bed37533e4013183</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-06 01:06:04</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f081169dc3878f14bed37533e4013183"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=4261965dc3878f14bed37533e4013187"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4261965dc3878f14bed37533e4013187"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=4261965dc3878f14bed37533e4013187"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=4261965dc3878f14bed37533e4013187"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=4261965dc3878f14bed37533e4013187"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=4261965dc3878f14bed37533e4013187"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=4261965dc3878f14bed37533e4013187"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=4261965dc3878f14bed37533e4013187"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_4261965dc3878f14bed37533e4013187</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-31 00:08:49</sys_created_on>
+        <sys_id>3481169dc3878f14bed37533e401318a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Contractor offboarding" source="x_1884414_contra_0">095337a7c3b2c7d0bed37533e4013109</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-31 00:08:49</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_4261965dc3878f14bed37533e4013187</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-31 00:08:48</sys_created_on>
+        <sys_id>6881169dc3878f14bed37533e4013171</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Contractor offboarding" source="x_1884414_contra_0">095337a7c3b2c7d0bed37533e4013109</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-31 00:08:48</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_4261965dc3878f14bed37533e4013187</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-06 01:06:04</sys_created_on>
+        <sys_id>c6281913c3cb8b10bed37533e40131d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Contractor offboarding" source="x_1884414_contra_0">095337a7c3b2c7d0bed37533e4013109</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-06 01:06:04</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_4261965dc3878f14bed37533e4013187"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_4261965dc3878f14bed37533e4013187"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=firefox,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Flow to delegate and execute offboarding contractors</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>contractor_offboarding</internal_name>
+        <label_cache>[{"name":"373c09e4-aaa4-4a08-afc8-c9b43d3c710a.record","label":"2 - Update Record➛Contractor Record","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"73d9fcf1-e5de-4419-ac3f-e6fed47830be":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"34881961-43c1-4659-9e24-03cacd2cee86.record","label":"4 - Update Record➛Contractor Offboarding Task Record","reference":"x_1884414_contra_0_contractor_offboarding_task","reference_display":"Contractor Offboarding Task","type":"reference","base_type":"reference","usedInstances":{"e080dd22-40a4-41b5-8cb8-00cb9c0e896e":["record"],"27324f1a-c33e-442c-aa06-3be98eb18810":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d3c768f9-ce5b-4c92-a89c-c50f8330f1ac.record","label":"1 - Create Record➛Contractor Offboarding Task Record","reference":"x_1884414_contra_0_contractor_offboarding_task","reference_display":"Contractor Offboarding Task","type":"reference","base_type":"reference","usedInstances":{"34881961-43c1-4659-9e24-03cacd2cee86":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.table_name","label":"Trigger - Record Updated➛Contractor Table","reference":"x_1884414_contra_0_contractor","reference_display":"Contractor","type":"table_name","base_type":"table_name","usedInstances":{},"attributes":{"test_input_hidden":"true"}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Contractor Record","reference":"x_1884414_contra_0_contractor","reference_display":"Contractor","type":"reference","base_type":"reference","usedInstances":{"54172213-39c1-4bfe-91b4-d045a14e9bee":["record"],"d3c768f9-ce5b-4c92-a89c-c50f8330f1ac":["contractor"]},"attributes":{}},{"name":"Updated_1.current.contractor","label":"Trigger - Record Updated➛Contractor Record➛Contractor","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1884414_contra_0_contractor","column_name":"contractor","usedInstances":{"d3c768f9-ce5b-4c92-a89c-c50f8330f1ac":["contractor"],"373c09e4-aaa4-4a08-afc8-c9b43d3c710a":["record"]}}]</label_cache>
+        <master>true</master>
+        <name>Contractor Offboarding</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Contractor Offboarding">4261965dc3878f14bed37533e4013187</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-06 01:18:08</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>beea11dbc3cb8b10bed37533e401312b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-06 01:18:08</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=beea11dbc3cb8b10bed37533e401312b"/>
+    <sys_variable_value action="delete_multiple" query="document_key=beea11dbc3cb8b10bed37533e401312b"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=beea11dbc3cb8b10bed37533e401312b"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=beea11dbc3cb8b10bed37533e401312b^sys_idNOT IN7eea11dbc3cb8b10bed37533e401312c"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>beea11dbc3cb8b10bed37533e401312b</id>
+        <name>Contractor Offboarding</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-06 01:18:08</sys_created_on>
+        <sys_id>7eea11dbc3cb8b10bed37533e401312c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-06 01:18:08</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=7eea11dbc3cb8b10bed37533e401312c"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=beea11dbc3cb8b10bed37533e401312b^sys_idNOT IN7aea11dbc3cb8b10bed37533e401315b,7eea11dbc3cb8b10bed37533e4013142,faea11dbc3cb8b10bed37533e401312e"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Contractor Offboarding">beea11dbc3cb8b10bed37533e401312b</model>
+        <model_id>beea11dbc3cb8b10bed37533e401312b</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_beea11dbc3cb8b10bed37533e401312b</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-06 01:18:08</sys_created_on>
+        <sys_id>7aea11dbc3cb8b10bed37533e401315b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-06 01:18:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7aea11dbc3cb8b10bed37533e401315b"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Contractor Offboarding">beea11dbc3cb8b10bed37533e401312b</model>
+        <model_id>beea11dbc3cb8b10bed37533e401312b</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_beea11dbc3cb8b10bed37533e401312b</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-06 01:18:08</sys_created_on>
+        <sys_id>7eea11dbc3cb8b10bed37533e4013142</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-06 01:18:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7eea11dbc3cb8b10bed37533e4013142"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Contractor Offboarding">beea11dbc3cb8b10bed37533e401312b</model>
+        <model_id>beea11dbc3cb8b10bed37533e401312b</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_beea11dbc3cb8b10bed37533e401312b</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-06 01:18:08</sys_created_on>
+        <sys_id>faea11dbc3cb8b10bed37533e401312e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-06 01:18:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=faea11dbc3cb8b10bed37533e401312e"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=beea11dbc3cb8b10bed37533e401312b"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=beea11dbc3cb8b10bed37533e401312b"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=beea11dbc3cb8b10bed37533e401312b^sys_idNOT INcbea11dbc3cb8b10bed37533e4013176"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Contractor Offboarding">beea11dbc3cb8b10bed37533e401312b</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-06 01:18:09</sys_created_on>
+        <sys_id>cbea11dbc3cb8b10bed37533e4013176</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-06 01:18:09</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9Va227bOBD9FUFPu0C6kCxfs0/ZXLYB2gZw3O5DtxAokrKFlUlXpJS6Rf99h7pZ1i12JLfuS2KTNHlm5syZoeWP33QfOdTXL/UFcnyqX+gekzRgyF9sNxSGpRq2GVqruTViBEkebPVLGYT0QncDvl7Q9cZHEha7yBcwyANCA/3SvNAj5If0cSvuCewEn4+3SffU02l4/8U2p9Ph0BzamDMZINtIX2A4C9YRT8AJ2w/p8uviHF55Pgko0y8/frrQNyiAI6Q6/ltpylMYTEKQOaAGtkxrMDCMwXRoOmPLMQfEQhRNYcOyP0qYZY1bdgbTL5IyQknui4rHAorIA/O3hRVfhPcV9pwaatalgBjTxF/5Wzt1QTKMV9zD9GEjPc6SkQRdMsn9cM3eJaiV86iLQl9mzoORUMB+dKOAMpnjcB9X/GmeHXjnsdimdNLnGPn5OyRl4DmhpEK52fV8cLideETwMIjRz2+vH+Y39j9Xi+vXt3N7fvu4mN9fL25v9O+xXfbnUO2YIEyx2Ik53/OI33nUV2Fj4dqhKtoCB95GXmHpRRnfvl/sOAzMIF7slQqPcTYl9nmcWd9GZMNopDIunJjRmbuuw1FAPLa0hUQyFP+GhmERlMA+lrOOM0OEogbOjicFzhbtrwEoa1xRtLGNvelIM32HhvGTCJxK0Uv5u+aE+je77XSYXC6B0R7bhFL56AkxKWzJbUSIXfCeWhqqgGaOs/mGBsphau7D1Zvr11fv/r59/DP9fzd/eJu9Xjw8mwiJT6rZ8HweBCGDLew8ntVsiAOQR+KNJ8Dwj5DLj/RzmITvFciZmzk9PgGWu2/SE+Yh0zjwAP5oOAzA51LLJNK9X6NlGirY0KdYFjjlvhfFd289ISBRCkY0YUh9XYKQnw5U1TKDEyiiI5ZPfQpFNSRRybelKne0TowxMYfOZGxMlEqYhuW4pjExRsgllmHMrIJOVME0opQlwvSoF8ephYgJ6h/Av7JjU8hGMUMOIk+0z7zMdEWMVJSu+4Fm9gRtoKCVxNU6Sl1zMibDN/ucbDOt564CkQjBJ0hm4yFdwwGq6Pr8CYS9uyI6CP+3DHjISFmT1BGax7TdCu231J2/n04dXR7Qdjz7K85JF3dByWiN2LYHRRxSTCbj4dgAIbRAA53RbOZgNHDdyXhCDVJSxB2MWmxnrITPUC6q42yTKtbSJapj2RF62AFgRRuPBthdFVM61mpiMvdrqN/TijIboAa2r/StIoJL3yM0m+s3xytHR7us7prnljslo9FkgidwO4I8d4fUQeZwMEKzydii41KeV6C0wZQ1njnhnUlsRXx8gwa8T6bO6wuAU5JVUClV6elcrxm0tfEW+S08L5IqNlqsLDzQ3nH26n63TnukUPvi2/OJCvchoFTYtR+KyuFyVWkkAMlfML6HRLWnDT47u/tXiVHRvq2du42pNRsR16pXocmgToV2YJphnmnfcWDWRI35V9eAHMr6qDZ5GjuGFxC3RI5iK9HS6/TlFLN3pwxO5xSrc3+VZWDjpfMlYH+hKhc3HD2WOgWB2twtKvgN12BCgzM1z9XS7zgp0ZytJlcUPOxDXw3nawpMV+luqSxVZDm/fyqupI+vFDwY1tKG7PxqWYk3/d6esTtzyMxq6KpHzV11c1ErTZ9pZTs6U6K6xGstb8ftW96ztsAViLrPgwNLV69W19evblbXVrDnrO5em9ru/jUozr/qKNCLJAzdaw1nuHRtwSd8BBQyD8ZtvEJsmTzeyc69gyhQhFdaskRLlpywWvhPaCv0chUDhqskSr8bhwFIJ5aI3YmA0IgG24on1KAWbogqLD+8cLX88CN9sipkAJ9cbveyHffxEAybs9HAIlNsmTOr+gMPs1C09vOgGWFjlXrm9x5NVWrlxU+ZC8en8ZLemsaamD9i1tZI4hUVFxoENX7wEkumFwgZr/5D7/E6h2k1HHVFrDHVoqYsbSwKLekSlROtrgrUcD0q5UWxDrRe3FrMN3sxf9CH+dbLzB92LoNZftbWwdR7/da+l5a6T/8DdeIWrNUmAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=beea11dbc3cb8b10bed37533e401312b^sys_idNOT IN43ea11dbc3cb8b10bed37533e401316f,4bea11dbc3cb8b10bed37533e4013172,4fea11dbc3cb8b10bed37533e4013173,c3ea11dbc3cb8b10bed37533e4013173,c7ea11dbc3cb8b10bed37533e4013170,c7ea11dbc3cb8b10bed37533e4013174,cfea11dbc3cb8b10bed37533e4013171"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Contractor Offboarding">beea11dbc3cb8b10bed37533e401312b</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-06 01:18:09</sys_created_on>
+        <sys_id>43ea11dbc3cb8b10bed37533e401316f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-06 01:18:09</sys_updated_on>
+        <ui_id>d3c768f9-ce5b-4c92-a89c-c50f8330f1ac</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VUTW8aMRD9K8jn1WqXpYhwq4g4tUFqUi5pZHnXs2DVa29tL4Ei/nvHa/OhJKip1Es44Zn3xu8NfjzuieBkSsY5ZJ9u8nFV5EUxzLLhZJSX46LMh7xgACOSEMUaQKRjpQTaHxKyYbLzxS3NJ5PRKB/RSitnGM3il8ppQ3Vdl5oZLtSKOmZ/IpEL20q2W0b+7AQeLM7gwUMAV2shuQFFpo9PCWmZwcsdGDLdv2i914pkJUiEPngvV6y5Xftm7csld3AXGtpwrydLCGwdKA4opGbSQkIapjhDYzsydabDggHGF0ruToi1UA4HEo/dWvEbr51kHlcDOqsg9E5HGncXyvUtc+weJ1euMxFarbWowIadcKhZJ93sshYAi9YJrQKltxnZWnaNugsrIacBx58KK51FEdB6n155tFHfr/Xzt6PKuVD9SmJT6orJ04k5Z0TZOa9nT0BCg4Now9rWP5HW6I3oyailSVcSD2kt9TNeasVKpfhQUHiKa2XpHOu3fXnJjPAuvuIYJB8SYnd2Jpm1Zy+4RPqr80qCs+iBhjV4SmVE6z7jBRuIcg/JMSMcspurDysvzw+pj4W9yMc5DD+6LCv4fv+9RfnAaZ5WncGNucPhdSzeS/vHgPzdxzEgcwGS2zeMHdMBDep1QIPRFwmJzcEyNmNK8v+Vknyc9Z8PlJVg7sNH5eJf8Uponv4Ad1KNdFoGAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=43ea11dbc3cb8b10bed37533e401316f"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Account disabled is marked true</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Contractor Offboarding">beea11dbc3cb8b10bed37533e401312b</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-06 01:18:09</sys_created_on>
+        <sys_id>4bea11dbc3cb8b10bed37533e4013172</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-06 01:18:09</sys_updated_on>
+        <ui_id>34881961-43c1-4659-9e24-03cacd2cee86</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXU/bMBT9K5Wf2ypp0i7t20SFNImBBIgXxqIb2wFrjp3ZDtBV/e+7Tpy0AsRA4gWtT71f9jkn9yTXWyIYWZGUsyhexguaxEkyi6JZlsbFIiniGUuA85iMiYKKY6fhVBuG8T3Ixie2W5bQL4usXE4onxeTlC5nE8iWdELnUZklSVTGQKfd3G6Hk0zYWsLmKhyAGXonJDNckdX1zZjUYPAuxw1ZbZ+U3gpWQsEltp73aJ+id5vax0zTpuLK5aJPnoTJdaiMvq2xgkMeThyNCX90XDGOQEqQlo9JBYqB02ZDVs40mDAc2JmSm6HjTijXEa3g0Yo/eHMa+b6SIzMaRBjCPAjUpcs1OLjAk6lrzKCXFpTbThPGS2ikOzrMdQ1ntRNadSMOCtlPa9lU6rRThAwHHDyPxiIIXnueHnlHq7y40w/nPchjoVpJAkWpKcghAueMKBrn4WwJl7zVuIK6Fuo2r42+F+0wQqmmtxKDaSn1A95pxa2aAvW4p6gqTI8xv27TV2CEJ/Edj8Hh3ZjYjT2SYO2eCmqY/248ko5YoJC3KrQS5O0m+GFqRO2+4lX3PADfjYMdivlrG0aX+4U6OHNvicc8zrI0jdOcauUM5FH4Q3FNcl2WhQbDvBQO7K/njjgamkdn++bRZdf8PrO8gUpvlst2RV6mFvzyLHdyODs67QrBLfMPc0v2mdwSaHx6u/zLJNHs1dfwwSa1vrAHBgFKdYP34KPzENmPJooS5vfhp3XgeBdP5s+t8Y7J9/nkDWx6nxwLLpl9gV5vEl4hZMfzju4To4Ti6CoUh0/Lh7klXkTt7xN55r/5wtz8BVTT1G1yCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4bea11dbc3cb8b10bed37533e4013172"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Contractor Offboarding">beea11dbc3cb8b10bed37533e401312b</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-06 01:18:09</sys_created_on>
+        <sys_id>4fea11dbc3cb8b10bed37533e4013173</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-06 01:18:09</sys_updated_on>
+        <ui_id>54172213-39c1-4bfe-91b4-d045a14e9bee</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXW/aMBT9K8jPKEpIiihvEwhpUtdK7cZLV0U3tgOWnDizHQpD/PfdJE6IoGqp1Be0POH75XNO7iHPeyIYmZKIMz+4DcY0DMJw5PujSRQk4zAJRiwEzgMyJDlkHCs1p0ozPG9AllVgv/9VMLCcxYFHS615bg8HzDNhCgm7pSvDCF0LyTBPps8vQ1KAxomWazLdn6QuhSQh4RJLH1tMpxjtrqjOTNEyQ1yxaIN3rnPuMoPvc8xgUwUn8IeEby3PGUcgKUjDhySDHFkqvSNTq0sMaA7sIZe7rmItctsQzWBrxF+8OfKrupQjM+pE6I6xE6gJp3Ow8ISTqS11p5cSlJtGE8ZTKKWd9WNNwUNhhcqbFguJbLuVLLP8vlGEdAN676M0CIIXFc8KeUMrfVqr18cW5ELktSSOolQUZHcCa7VISlvB2RMuea1xBkUh8lVcaLURdTNCybyVxIOXSvWKdxqxyj2gFW4PVQVvgfF5HV6CFhWJHzgGmw9DYnZmJsGYIxXUMP5TVkgaYo5CXKtQSxDXm1A1Uy0K+w2v2nAH/DB0S5/cvLdh9Pa4UL2Zx8XfxsFkEkVBFFOVWw2x735QXJNzA8z6uc9Z4QKgrRV+1gvwNnDnhrPYXb93cN8knBduvswLk2vygqNx9Wb4yAL+6N0/2d4m1Vtveuuv0jRRoFlFz1iwpfld+n7IevFzE1zW9Dl3XMChdcdCcMnMG6Raa/AM0VoeNyRP7OGSg6VLdp+LL/NIMPbr54qc8t98NV7+AWUI+issCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4fea11dbc3cb8b10bed37533e4013173"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Wait For Condition">89ce8a4187120010663ca1bb36cb0be3</action_type>
+        <action_type_parent display_value="Wait For Condition">8bb9a8160b10030085c083eb37673aec</action_type_parent>
+        <attributes/>
+        <comment>Asset returned  is true</comment>
+        <compiled_snapshot>89ce8a4187120010663ca1bb36cb0be3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Contractor Offboarding">beea11dbc3cb8b10bed37533e401312b</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-06 01:18:09</sys_created_on>
+        <sys_id>c3ea11dbc3cb8b10bed37533e4013173</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-06 01:18:09</sys_updated_on>
+        <ui_id>e080dd22-40a4-41b5-8cb8-00cb9c0e896e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2XXW+jOBSG/0rFdZy1wRDTu1HSait1p1Kamb2YHSFjHzfWEsjw0Zls1f++BpxAPpppd9JKlfamKgcf857X58mBLw+Ols65Q0MBjFPCRsTFmOAg8AQncewFIsYxUGfgpHwBZmUOIsulub7nSVUHHh48yhgJA4KoJ8yfwA9RCC5F2OwhpCsAWDBs8x4fTabUxTLhq892AxMRc53IHFLn/MvXgbPkuXlWCblz/rBz67liEx5DYpZO12p31ZerZX0tM1EtIC0jvQ5e28yJvXN2NTF3TFIthwwc+FFCKsHoUDwpYOAseCp5meUr57zMKxPIgcubNFltVsx1WrZ1LviPQv9jHuy59ToFpjBhPdhcRtafNqwmvOS3ZmdRVvnGrkwLKFpLJCheJeW4H2sX3CxLnaVtSsnjZJ2dJdUi/dga4mw26B1HVRgRsKzrrJW3ZanbefZ9uhZ5qdPGEVtikgmebK54WeY6rspazoNT6dkhs9vwYbuVTszxR43oqMiqvDFpejG+mU6iPz/Mxr9fTKPpxe1sejWeXdQZkECz9YIvlzq9i5Z5dq8bhabexfAuMRdDlWTfTWGFvkuHXNTmDM3R8eGliU+a8Gee6/qhf5htTHKt8lOqv1Vw1TSeUsQjQYAIwR6iJA5QyMBHGHxOfdd0fuA6jwOnWBXjhBdF57E53OhbVVvUOm69jZrjactsOrROFrlelh+MvHuwjj4O1pj6Rzufd43e27ND9UdEGKOU0EhkaZnzCNt/hOnfKFMqzngua/tKXvy9T+p4s/jsplt8NmsXvxDin5eyhnjW9O7h0izHe7Hrfu7Zx/aGpdg9TrGNdBi3/X+AYobfEcW2rF/HeMvrbYq33NZF1PayFd3s+laouoSFjMYe8mLqIxoqhRhmFFHgWPiuHFEi/gOqPwX0+GhSXRcb8KSu6yp6gBohUEY5mCZJQf5VYezJuvv2UTyy8qTDVPU4HPclHyrDwrgXuz60gYXRO9VIpRi/JxxPNVS3zN6mccvuN6EOJAtiHzMEijHzOjhiKCSui4KAS0KokAq/7oDE8lg3q957bKkXkFVlpBJ+1yMQ76O2/t16GVfPULLm6iJtfjatoiclWrriLEuAp7tzzrTTb5dWqUWLvnDOHWPrHZF1skHXOb0z5fpevwlXQnBmxhZHoSfAfGHFAjElFPIg9pXnxywe4VeYZuJ4D4f7rSqrnDen2BF1gg++Z+hYszTpBDwtzZLUnM1u/Hp/I4uT/z9Ov4TTnt07X4Ddjddiam7yJnxV1F3RvivtUAaEj/y4/qjjiLohQTykLgoDGAFVLPB4+AqUMXK0u9V+KxdiDrJK4LSUPUPHmrLbTsDT0ixlXaNvAzbtxS1hwckIY3svg2KR9sUd4q1X1bvkTt0Cz8X8UkNSn6f9QnuCxv6xbIPYP5i3mW6uSzwJAhFpXh2pG7iIeXSERiGLMTWtF3twQu6+/gv6MPfr9RQAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c3ea11dbc3cb8b10bed37533e4013173"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>User is locked out and active is marked false</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Contractor Offboarding">beea11dbc3cb8b10bed37533e401312b</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-06 01:18:09</sys_created_on>
+        <sys_id>c7ea11dbc3cb8b10bed37533e4013170</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-06 01:18:09</sys_updated_on>
+        <ui_id>373c09e4-aaa4-4a08-afc8-c9b43d3c710a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXWvbMBT9K0XPwdhxGtq8jYTAoGuh3fLStUaW5ERMljx9pM1C/vuuZdkxSelS6EuY33Q/dM85Ptd+3CJO0QSNGI2T62RM0iRNh3E8vBol+TjNkyFNMWMJGiCJSwaVmhGlKZzXWLg6sN3+qCi2jGZJRJzWTNqIKGk1Jlbp3Q5KKTeVwJtF6IAIWXFBoRRNHp8GqMIaLrdMo8n2IHUqOoFzJqD0voV3CNduqvpMFXElQMx4G7wJnbOQufg6gww01XCSeIDYq2WSMgBSYGHYAJVYAmGlN2hitYOAZpjeSbHpKlZc2oZoiV8N/wOTR3FdVzBgRoII3TELAjXhYoYtfoCbiXW600txwkyjCWUFdsJO+7Gm4K6yXMmmxeJctN1KuFLeNoqg7oLe+3AGQLCq5lkjb2gVDyv1ct+CnHPpJQkUhSJYdCdsrea5szWcLWKCeY1LXFVcLrNKqzX3zQCljJYCDlEh1AvMNHwpI7AK4I5AVRzNIT7z4QXWvCbxDa6B5t0AmY2ZCmzMngpomP12NZKGWKCQeRW8BJl3Qt1MNK/sFxi1ZgH4bhD8n1++5zByvTdU7879DgCuDCTUx16fdpvwYdefgKl1/Xf/rt/GGIx/FLvp917cNolg+8tPs/3VOdk+0Dh73//L7fHw3e9pz0ne4KbndKD/Cz71ytmfLo5TWjvhGfspTcBPOt6Dk/s+tiMnMGl3ZM6ZoOYNau2CsBIAW5Y1VA+WJCQvFiHZ/R8+bVOSceyfM9qX/+Y38fQXwScfUigJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c7ea11dbc3cb8b10bed37533e4013170"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Contractor Offboarding">beea11dbc3cb8b10bed37533e401312b</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-06 01:18:09</sys_created_on>
+        <sys_id>c7ea11dbc3cb8b10bed37533e4013174</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-06 01:18:09</sys_updated_on>
+        <ui_id>27324f1a-c33e-442c-aa06-3be98eb18810</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVTU/jMBD9K5XPpUqatEp7W1EhrcSCBIgLi6KJPaHWOnHWdoBu1f++k8RJq4JYkLig7aHqfNlvXt9L7rZMCrZkMYogXIRzHoVRNA2CaRKH2TzKwqmIADFkY1ZCgdRpkGsjKH4EVTeJ7TaKkyRczMOTOOL0NZ8tThY4jU+CiAMXU46YzCfd3G5Hk0LaSsHm1h9AGb6WShgs2fLufswqMHSXQ8OW26PSe8EqyFBR61WP9hi921RNLDSvCyxdKvvkuZ9c+cro+4oqNNTACYMxw2eHpUACkoOyOGYFlAKcNhu2dKamhEEQl6XaDB1rWbpu0QKerfxDN8dB05cjbcY9CUOYeoK6dL4CB9d0Mne1GfjSkqPtOBGYQ63c6WGua7isnNRlN+IgU/20VnVRXnSMsOGAg/+jtgQCq2bPBnm3Vn691k9XPcgzWbaU+BWV5qCGCJwzMqtdA2fLUGHLcQFVJcuHtDL6UbbDBKWYPCgKJrnST3SnlQ/lBHiDe0KswuSM8qs2fQtGNkv8oGNoeDdmdmNPFVi7X4U4TH/XDZJuMb9C2rLQUpC2SmiGuZGV+0ZXPaIHvht7O2SztxTGF3tBHZy5t8RzGiZJHIdxynXpDKSB/8FJJqnO80yDEQ0VDuyvl444HZpHl/vm0U3X/DGzvGOV3iw3rUReX8375UXu/HB2dNEVvFtmn+aW5Cu5xa/x5e3yL5ME0zcfwwdKan1hDwxiHTj8WQdBJKKX8j+qfkzv70DV6/1MohL2FZi92LEgWA7TDvaR4H1xdOuLwyvi01QfzoP284W0/9+8Ke7/AjtjA8Q6CQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c7ea11dbc3cb8b10bed37533e4013174"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Wait For Condition">89ce8a4187120010663ca1bb36cb0be3</action_type>
+        <action_type_parent display_value="Wait For Condition">8bb9a8160b10030085c083eb37673aec</action_type_parent>
+        <attributes/>
+        <comment>Locked out is true and Active is false</comment>
+        <compiled_snapshot>89ce8a4187120010663ca1bb36cb0be3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Contractor Offboarding">beea11dbc3cb8b10bed37533e401312b</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-06 01:18:09</sys_created_on>
+        <sys_id>cfea11dbc3cb8b10bed37533e4013171</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-06 01:18:09</sys_updated_on>
+        <ui_id>73d9fcf1-e5de-4419-ac3f-e6fed47830be</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2X227bOBCGX6XQtemVREqmclfYDjZAtgGcbPei2wojHmJiacnVIa0b5N2XkuhIPsR1WydAgF5qpKH/+Wc+j/Th3lHcOXNIxAQF4tGR57uu54YhZuAlCQ5Z4iaCOAMnhYUwT+aCZTk313egqzpwf49HmLmRIAgACCLgUgSSUcSihGCO2chzYdjmPTyYTK6KpYbVe3uAibC50jwXqXP24ePAWUJufqsUuXN2v3XrWLEaEqHNo7O12m315WpZX/OMVQuRlrFaBy9t5sTeeXMxMXdMUi3HGzjiaylSLowOCboQA2cBKYcyy1fOWZlXJpAL4FepXj0+MVdp2da5gK+F+mZ+GPv1c1KYwpj14PEytv60YTmBEq7Nyays8ke7MsVE0VrChYRKl+N+rH3galmqLG1TSkj0OjvT1SJ91xriPB7Qa0dVGBFiWddZK2/Lktfz7MtsLfJcpY0jtkSdMdCPV1CWuUqqspZz71TqZp/ZbXi/3VJp0/64ER0XWZU3Js2m46vZJP7n7c34z+ksnk2vb2YX45tpnSG0aI5ewHKp0tt4mWd3qlFo6l0Mb7W5GEqdfTGFFeo2HQKrzRma1sHw3MQnTfg95Kr+0b/MMSa5Vvl3qj5X4qIZPCk97IUh8jwXI+IlIYqoCJArAiCBT8Ig9J2HgVOsirGGoug8Ns2NP1e1Ra3j1tu4aU9bZjOhdTLL1bJ8a+TdCevow2CNaXBw8qEb9N6ZHapGV2x6m+8yOM7SMjeWZPmP0/h9TWsab5oh3K/RArkTu+znvnnX3rA4+odxtJGOx3aQ9+BI3VeEoy3r13nc8HoTxw23VRG3Q2lFN6e+FHO+RyNKEoxwQgJEIikRdalZMwJcFvh8RDz2E8x9l7TDO0Z2U8yylKu6rqJHmvH/P8HjrCr/rVwX83ryPkHzS21g7eEWh0fnnXRjyh6j4345+0q0oO7ELvcdYEHFp9qbxHVfE6qn2pwbZm+SumH3ixApOA2TwLzkCUkpInhEUeT5PgpD4J5HGJfu825Blx+aZtl7WS3VQhiWYqnhtkenuwvez3F1hJI1V9O0+Uu1ip6UaOlKskwLSLd3oBmnP86tUosW+cEdeIitV0TWyZZg5/TWBux7/SJcMQbUrDRAEWYCkTBhiEomERZJIHGQ0GTkPsOmY4dnONodVV7l0HSxI+oEX3VH6FizNOkEPC3NktT0Zjt+uXuQxSn4jdMv4bRj99ZnXnfjuZiam7wJrIp6KgzDu5QJD0ZBUn+5ASJ+5CGIiI+iUIwEkTTEED0DZdQ7ON1yd5QLNhe80uK0lB2hY03ZdSfgaWmWsm7QNwGb9eKWsPBkhNGdl0G2SPvi9vHWq+pVcievBeRsfq6Ervtpv96eoLHflk0Q+415me3m+x7mgiGPm1dH4oc+opiM0CiiiUvM6CVYnJC7j/8DQbdsYNoUAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=cfea11dbc3cb8b10bed37533e4013171"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=beea11dbc3cb8b10bed37533e401312b"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=beea11dbc3cb8b10bed37533e401312b"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=beea11dbc3cb8b10bed37533e401312b"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=beea11dbc3cb8b10bed37533e401312b"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_beea11dbc3cb8b10bed37533e401312b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-06 01:18:08</sys_created_on>
+        <sys_id>72ea11dbc3cb8b10bed37533e4013157</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Contractor offboarding" source="x_1884414_contra_0">095337a7c3b2c7d0bed37533e4013109</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-06 01:18:08</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_beea11dbc3cb8b10bed37533e401312b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-06 01:18:08</sys_created_on>
+        <sys_id>76ea11dbc3cb8b10bed37533e401313e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Contractor offboarding" source="x_1884414_contra_0">095337a7c3b2c7d0bed37533e4013109</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-06 01:18:08</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_beea11dbc3cb8b10bed37533e401312b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-06 01:18:08</sys_created_on>
+        <sys_id>cfea11dbc3cb8b10bed37533e4013162</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Contractor offboarding" source="x_1884414_contra_0">095337a7c3b2c7d0bed37533e4013109</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-06 01:18:08</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_beea11dbc3cb8b10bed37533e401312b"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_beea11dbc3cb8b10bed37533e401312b"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>4261965dc3878f14bed37533e4013187</sys_id>
+        <latest_snapshot>beea11dbc3cb8b10bed37533e401312b</latest_snapshot>
+        <compiler_build>glide-australia-02-11-2026__patch2-04-17-2026_04-29-2026_2044.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=4261965dc3878f14bed37533e4013187^sys_idNOT IN8bea11dbc3cb8b10bed37533e40131d1"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_flow_trigger_plan","id":"8bea11dbc3cb8b10bed37533e40131d1","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
+        <plan_id>4261965dc3878f14bed37533e4013187</plan_id>
+        <snapshot>a9cbd19fc3cb8b10bed37533e40131d4</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-06 01:18:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8bea11dbc3cb8b10bed37533e40131d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-06 01:18:09</sys_updated_on>
+        <trigger display_value="">03ea11dbc3cb8b10bed37533e40131cd</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=4261965dc3878f14bed37533e4013187"/>
+</record_update>

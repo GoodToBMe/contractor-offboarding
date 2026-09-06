@@ -1,76 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_choice action="INSERT_OR_UPDATE" field="offboarding_status" table="x_1884414_contra_0_contractor" version="3">
+    <sys_choice action="INSERT_OR_UPDATE" field="state" table="x_1884414_contra_0_contractor_offboarding_task" version="3">
         <sys_choice_set action="INSERT_OR_UPDATE">
-            <element>offboarding_status</element>
-            <name>x_1884414_contra_0_contractor</name>
+            <element>state</element>
+            <name>x_1884414_contra_0_contractor_offboarding_task</name>
             <sys_class_name>sys_choice_set</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-08-25 21:05:14</sys_created_on>
+            <sys_created_on>2026-09-02 18:01:37</sys_created_on>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>offboarding_status</sys_name>
+            <sys_name>state</sys_name>
             <sys_package display_value="Contractor offboarding" source="x_1884414_contra_0">095337a7c3b2c7d0bed37533e4013109</sys_package>
             <sys_policy/>
             <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
-            <sys_update_name>sys_choice_x_1884414_contra_0_contractor_offboarding_status</sys_update_name>
+            <sys_update_name>sys_choice_x_1884414_contra_0_contractor_offboarding_task_state</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-08-25 21:05:14</sys_updated_on>
+            <sys_updated_on>2026-09-02 18:01:37</sys_updated_on>
         </sys_choice_set>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
-            <element>offboarding_status</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>Active</label>
-            <language>en</language>
-            <name>x_1884414_contra_0_contractor</name>
-            <sequence>0</sequence>
-            <synonyms/>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-08-25 21:05:14</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-08-25 21:05:14</sys_updated_on>
-            <value>active</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>offboarding_status</element>
+            <element>state</element>
             <hint/>
             <inactive>false</inactive>
             <label>Pending</label>
             <language>en</language>
-            <name>x_1884414_contra_0_contractor</name>
-            <sequence>1</sequence>
+            <name>x_1884414_contra_0_contractor_offboarding_task</name>
+            <sequence>0</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-08-25 21:05:14</sys_created_on>
+            <sys_created_on>2026-09-02 18:01:37</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-08-25 21:05:14</sys_updated_on>
-            <value>pending</value>
+            <sys_updated_on>2026-09-02 18:01:37</sys_updated_on>
+            <value>-5</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
-            <element>offboarding_status</element>
+            <element>state</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Offboarded</label>
+            <label>Open</label>
             <language>en</language>
-            <name>x_1884414_contra_0_contractor</name>
+            <name>x_1884414_contra_0_contractor_offboarding_task</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-02 18:01:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-02 18:01:37</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Closed Complete</label>
+            <language>en</language>
+            <name>x_1884414_contra_0_contractor_offboarding_task</name>
             <sequence>2</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-08-25 21:05:14</sys_created_on>
+            <sys_created_on>2026-09-02 18:01:37</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>1</sys_mod_count>
+            <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-09-05 21:57:59</sys_updated_on>
-            <value>offboarding</value>
+            <sys_updated_on>2026-09-02 18:01:37</sys_updated_on>
+            <value>3</value>
         </sys_choice>
     </sys_choice>
 </record_update>

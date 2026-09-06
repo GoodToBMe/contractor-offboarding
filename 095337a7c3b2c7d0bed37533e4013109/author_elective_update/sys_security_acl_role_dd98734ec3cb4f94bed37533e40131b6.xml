@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-02 15:34:34</sys_created_on>
+        <sys_id>dd98734ec3cb4f94bed37533e40131b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1884414_contra_0_offboarding_task.x_1884414_contra_0.contractor_user</sys_name>
+        <sys_package display_value="Contractor offboarding" source="x_1884414_contra_0">095337a7c3b2c7d0bed37533e4013109</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
+        <sys_security_acl display_value="x_1884414_contra_0_offboarding_task">c998734ec3cb4f94bed37533e40131ad</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_dd98734ec3cb4f94bed37533e40131b6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-02 15:34:34</sys_updated_on>
+        <sys_user_role display_value="x_1884414_contra_0.contractor_user" name="x_1884414_contra_0.contractor_user">195337a7c3b2c7d0bed37533e4013180</sys_user_role>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</application>
+        <file_path/>
+        <instance_id>fdb091feeb9826105a2dfceacad0cda3</instance_id>
+        <instance_name>dev302092</instance_name>
+        <name>sys_security_acl_role_dd98734ec3cb4f94bed37533e40131b6</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 15:34:34</sys_created_on><sys_id>dd98734ec3cb4f94bed37533e40131b6</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1884414_contra_0_offboarding_task.x_1884414_contra_0.contractor_user</sys_name><sys_package display_value="Contractor offboarding" source="x_1884414_contra_0">095337a7c3b2c7d0bed37533e4013109</sys_package><sys_policy/><sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope><sys_security_acl display_value="x_1884414_contra_0_offboarding_task">c998734ec3cb4f94bed37533e40131ad</sys_security_acl><sys_update_name>sys_security_acl_role_dd98734ec3cb4f94bed37533e40131b6</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 15:34:34</sys_updated_on><sys_user_role display_value="x_1884414_contra_0.contractor_user" name="x_1884414_contra_0.contractor_user">195337a7c3b2c7d0bed37533e4013180</sys_user_role></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>-283372989</payload_hash>
+        <record_name>x_1884414_contra_0_offboarding_task.x_1884414_contra_0.contractor_user</record_name>
+        <reverted_from/>
+        <source>41f69910c34bcfd0bed37533e401315c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-02 15:34:34</sys_created_on>
+        <sys_id>d998734ec3cb4f94bed37533e40131bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a062c1fac90000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-02 15:34:34</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>9998734e9acb4f94de2abb7da0a5abbe</update_guid>
+        <update_guid_history>9998734e9acb4f94de2abb7da0a5abbe:-283372989</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_1884414_contra_0_offboarding_task.x_1884414_contra_0.contractor_user">1e37d01ec3838f94bed37533e40131a2</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-02 17:48:27</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>0ec3554c0cae4e9a825c310480ea4c24</sys_id>
+        <sys_metadata>dd98734ec3cb4f94bed37533e40131b6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1884414_contra_0_offboarding_task.x_1884414_contra_0.contractor_user</sys_name>
+        <sys_package display_value="Contractor offboarding" source="x_1884414_contra_0">095337a7c3b2c7d0bed37533e4013109</sys_package>
+        <sys_parent display_value="">c998734ec3cb4f94bed37533e40131ad</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
+        <sys_scope_delete display_value="">11951106d61846208c5eb49fd88b6400</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_dd98734ec3cb4f94bed37533e40131b6</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_dd98734ec3cb4f94bed37533e40131b6">d998734ec3cb4f94bed37533e40131bf</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-02 17:48:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
