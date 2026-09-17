@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="enforce_dot_walk_cross_scope_access=true" audit="true" db_object_id="7865bf6fc3b2c7d0bed37533e4013182" label="Contractor" max_length="40" name="x_1884414_contra_0_contractor" type="collection">
         <element label="Vendor" max_length="32" name="vendor" reference="core_company" type="reference"/>
+        <element label="Adobe Subscription" max_length="32" name="adobe_subscription" reference="u_adobe_creative_cloud_connection" type="reference"/>
         <element label="Contractor end date" max_length="40" name="contractor_end_date" type="glide_date_time"/>
         <element choice="3" default="pending" label="Offboarding Status" max_length="40" name="offboarding_status" type="choice">
             <choice>
@@ -12,9 +13,12 @@
         <element label="Contractor" max_length="32" name="contractor" reference="sys_user" type="reference"/>
         <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <index name="index">
-            <element name="contractor"/>
+            <element name="adobe_subscription"/>
         </index>
         <index name="index2">
+            <element name="contractor"/>
+        </index>
+        <index name="index3">
             <element name="vendor"/>
         </index>
     </element>

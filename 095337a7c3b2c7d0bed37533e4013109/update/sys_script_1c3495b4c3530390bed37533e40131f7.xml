@@ -15,10 +15,13 @@
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition/>
+        <filter_condition table="x_1884414_contra_0_contractor_offboarding_task">asset_returned=true^adobe_subscription_canceled=true^EQ<item endquery="false" field="asset_returned" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="false" field="adobe_subscription_canceled" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
         <is_rest>false</is_rest>
         <message/>
-        <name>Disable Account</name>
+        <name>Mark closed complete and Offboarded</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -27,45 +30,36 @@
         <rest_service_text/>
         <rest_variables/>
         <role_conditions/>
-        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
 
-	// Get user from contractor field and  set locked_out to true and active to false
+    // Find current.contractor.contractor
+    var ourGuy = current.contractor.sys_id;
 
-	var contrctr = new GlideRecord('sys_user');
-	contrctr.get(current.contractor.contractor);
-	contrctr.setValue('locked_out', true);
-	contrctr.setValue('active', false);
-	contrctr.update();
-	
-	// Set asset to pending return
-	var assets = new GlideRecord('alm_hardware');
-	assets.addQuery('assigned_to',contrctr);
-	assets.query();
-
-	while(assets.next()){
-		assets.setValue('install_status',5);
-		assets.setValue('state',9);
-		assets.update();
-	}
+    //change the offboarding status to offboarded
+    var contrctr = new GlideRecord('x_1884414_contra_0_contractor');
+    contrctr.get(ourGuy);
+    contrctr.setValue('offboarding_status', 'offboarding');
+    contrctr.update();
+gs.addInfoMessage('The contractor '+ current.contractor.contractor.name + ' is '+ current.contractor.offboarding_status);
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-09-06 17:09:00</sys_created_on>
+        <sys_created_on>2026-09-10 16:59:30</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>7d633827c30f4f10bed37533e4013155</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>Disable Account</sys_name>
+        <sys_id>1c3495b4c3530390bed37533e40131f7</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Mark closed complete and Offboarded</sys_name>
         <sys_overrides/>
         <sys_package display_value="Contractor offboarding" source="x_1884414_contra_0">095337a7c3b2c7d0bed37533e4013109</sys_package>
         <sys_policy/>
         <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
-        <sys_update_name>sys_script_7d633827c30f4f10bed37533e4013155</sys_update_name>
+        <sys_update_name>sys_script_1c3495b4c3530390bed37533e40131f7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-09-11 21:36:00</sys_updated_on>
-        <template>account_disabled=true^EQ</template>
+        <sys_updated_on>2026-09-15 21:56:46</sys_updated_on>
+        <template>state=3^EQ</template>
         <when>before</when>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=7d633827c30f4f10bed37533e4013155"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=1c3495b4c3530390bed37533e40131f7"/>
 </record_update>

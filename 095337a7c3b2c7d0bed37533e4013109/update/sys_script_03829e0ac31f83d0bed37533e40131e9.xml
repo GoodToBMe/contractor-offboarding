@@ -5,7 +5,7 @@
         <action_delete>false</action_delete>
         <action_insert>true</action_insert>
         <action_query>false</action_query>
-        <action_update>true</action_update>
+        <action_update>false</action_update>
         <active>true</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
@@ -18,7 +18,7 @@
         <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
-        <name>Disable Account</name>
+        <name>Cancel Adobe Subscription</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -29,43 +29,45 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
-	// Get user from contractor field and  set locked_out to true and active to false
+	// Add your code here
+//Eg. UserName="admin", Password="admin" for this code sample.
+var user = 'admin';
+var password = 'mLfD*6-Hb2bK';
 
-	var contrctr = new GlideRecord('sys_user');
-	contrctr.get(current.contractor.contractor);
-	contrctr.setValue('locked_out', true);
-	contrctr.setValue('active', false);
-	contrctr.update();
-	
-	// Set asset to pending return
-	var assets = new GlideRecord('alm_hardware');
-	assets.addQuery('assigned_to',contrctr);
-	assets.query();
+request = new sn_ws.RESTMessageV2();
+request.setEndpoint('https://dev302092.service-now.com/api/now/table/u_adobe_creative_cloud_connection/'+current.u_adobe_subscription_number.sys_id+'?sysparm_fields=u_subscription%2C%20u_number%2C%20u_user');
+request.setHttpMethod('PUT');
 
-	while(assets.next()){
-		assets.setValue('install_status',5);
-		assets.setValue('state',9);
-		assets.update();
-	}
+request.setBasicAuth(user,password);
+request.setRequestHeader("Accept","application/json");
+request.setRequestHeader('Content-Type','application/json');request.setRequestBody("{\"u_subscription\":\"false\"}");
+var response = request.execute();
+gs.info(response.getBody());
 
-})(current, previous);]]></script>
+var myresponse = JSON.parse(response.getBody());
+gs.addInfoMessage('Adobe subscription for ' + myresponse.u_user + ' is cancelled');
+
+
+})(current, previous);
+
+]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-09-06 17:09:00</sys_created_on>
+        <sys_created_on>2026-09-14 18:27:08</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>7d633827c30f4f10bed37533e4013155</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>Disable Account</sys_name>
+        <sys_id>03829e0ac31f83d0bed37533e40131e9</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Cancel Adobe Subscription</sys_name>
         <sys_overrides/>
         <sys_package display_value="Contractor offboarding" source="x_1884414_contra_0">095337a7c3b2c7d0bed37533e4013109</sys_package>
         <sys_policy/>
         <sys_scope display_value="Contractor offboarding">095337a7c3b2c7d0bed37533e4013109</sys_scope>
-        <sys_update_name>sys_script_7d633827c30f4f10bed37533e4013155</sys_update_name>
+        <sys_update_name>sys_script_03829e0ac31f83d0bed37533e40131e9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-09-11 21:36:00</sys_updated_on>
-        <template>account_disabled=true^EQ</template>
+        <sys_updated_on>2026-09-16 17:32:58</sys_updated_on>
+        <template>adobe_subscription_canceled=true^EQ</template>
         <when>before</when>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=7d633827c30f4f10bed37533e4013155"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=03829e0ac31f83d0bed37533e40131e9"/>
 </record_update>
